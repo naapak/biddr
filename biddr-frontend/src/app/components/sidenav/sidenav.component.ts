@@ -9,6 +9,12 @@ import {AppState} from './app.service';
 })
 export class SidenavComponent implements OnInit {
 
+  public menuItems: Array<any> = [
+    {name: "Products", icon: "fa-tachometer", state: "/products"},
+    {name: "Orders", icon: "fa-folder-open-o", state: "/orders"},
+    {name: "Settings", icon: "fa-shield", state: "/administration"},
+  ];
+
   constructor() {
   }
 

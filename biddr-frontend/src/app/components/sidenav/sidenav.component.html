@@ -1,1 +1,15 @@
-<div>SIDENAV</div>
+<!--Navigation-->
+<div class="sidenav">
+  <div class="sidenav-menu-items">
+    <li *ngFor="let item of menuItems" routerLinkActive="active">
+      <a [routerLink]="item.state">
+        <div><i class="fa {{item.icon}}" aria-hidden="true"></i>{{item.name}}</div>
+      </a>
+    </li>
+  </div>
+
+  <!--Help-->
+  <div class="sidenav-footer">
+    <i class="fa fa-question-circle" aria-hidden="true"></i>
+  </div>
+</div>

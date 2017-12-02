@@ -15,7 +15,8 @@ import {ProfileComponent} from "./components/profile/profile.component";
 import {SidenavComponent} from "./components/sidenav/sidenav.component";
 import '../styles/styles.scss';
 import '../styles/headings.css';
-import {MatButtonModule, MatFormFieldControl, MatFormFieldModule, MatInputModule, MatPaginatorModule, MatSidenavModule, MatTableModule} from "@angular/material";
+import {MatButtonModule, MatFormFieldModule, MatInputModule, MatPaginatorModule, MatSidenavModule, MatTableModule} from "@angular/material";
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 type StoreType = {
   restoreInputValues: () => void,
@@ -42,13 +43,17 @@ type StoreType = {
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+
     MatButtonModule,
     MatSidenavModule,
     MatTableModule,
     MatFormFieldModule,
     MatPaginatorModule,
     MatInputModule,
+
     FormsModule,
+    FlexLayoutModule,
+
     HttpModule,
     RouterModule.forRoot(ROUTES, {
       useHash: Boolean(history.pushState) === false,
